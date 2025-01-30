@@ -42,22 +42,46 @@ Once on the server, we need to edit a file called `~/.bashrc` to make sure that 
 
 To add the mamba configuration to your `.bashrc` file, run
 ```
-echo "__conda_setup=\"$('/private/groups/kimlab/environments/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)\"
+echo '__conda_setup="$(\'/private/groups/kimlab/environments/bin/conda\' \'shell.bash\' \'hook\' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval \"$__conda_setup\"
+    eval "$__conda_setup"
 else
-    if [ -f \"/private/groups/kimlab/environments/etc/profile.d/conda.sh\" ]; then
-        . \"/private/groups/kimlab/environments/etc/profile.d/conda.sh\"
+    if [ -f "/private/groups/kimlab/environments/etc/profile.d/conda.sh" ]; then
+        . "/private/groups/kimlab/environments/etc/profile.d/conda.sh"
     else
-        export PATH=\"/private/groups/kimlab/environments/bin:$PATH\"
+        export PATH="/private/groups/kimlab/environments/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f \"/private/groups/kimlab/environments/etc/profile.d/mamba.sh\" ]; then
-    . \"/private/groups/kimlab/environments/etc/profile.d/mamba.sh\"
+if [ -f "/private/groups/kimlab/environments/etc/profile.d/mamba.sh" ]; then
+    . "/private/groups/kimlab/environments/etc/profile.d/mamba.sh"
 fi
-mamba activate base
+mamba activate base'
 ```
 
 This will give you access to the lab's installation of mamba, so we can share environments for reproducibility.
+
+
+##### Screens
+
+When using a remote computer the terminal that you activate to log on disappears when you leave. This means if you are actively running some tool or script, it will be killed if your computer falls asleep or the connection is lost. To avoid this, we use a program called `screen` which creates saved terminal sessions that you can enter and exit freely without them terminating.
+
+To launch a new screen we use the command `screen -S <name>` which will create a new terminal session called '\<name>'.
+
+When you are in a screen session, there are certain commands you can use to navigate:
+  - Ctrl-A then d will *d*etach you from the saved terminal and dump you back into the main terminal
+  - Ctrl-A then esc will allow you to scroll within the terminal session
+
+If you have many saved terminal open, you can view all their names with the command `screen -ls` to *l*i*s*t the screen sessions.
+
+When you see the screen you want to enter, you can reconnect back to your saved terminal with the command `screen -R <name>` to *r*eattach to the screen.
+
+Lastly, you should remember that saved terminals **DO NOT** die when you close the remote connection, meaning you have to kill them yourself. One way is to reattach to the saved terminal you want to kill and running `exit`. The other is to run `screen -XS <name> quit` from the primary terminal session to kill the saved terminal with name '\<name>'.
+
+##### Directories
+
+Our labs directory is `/private/groups/kimlab` and we encourage individuals to make their own directory within the kimlab dir. Inside your folder your work can be organized however you feel is most efficient for you, but we would also like you to keep README files scattered to help others read through and parse your work directories.
+
+All of the labs sequencing data should be stored in `/private/groups/kimlab/data` and reflected in the directory's README file. Anyone who wants data in another place should **SYMLINK** the data to the new location.
+

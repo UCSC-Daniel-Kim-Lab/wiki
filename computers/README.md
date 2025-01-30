@@ -171,4 +171,3 @@ This command will list all the environments you have created on your computer.
 
 #### Notes
   - Most programs have their own unique flags and arguments, but the majority ship with a flag `-h` or `--help`. This flag will print out the help documentation for the program, which will list all the flags and arguments you can use with the program, as well as proper way to call the command.
-  - 
