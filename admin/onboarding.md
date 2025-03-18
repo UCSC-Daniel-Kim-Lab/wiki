@@ -2,10 +2,6 @@
 ## 26 FEB 2025
 ### Alex D. Hill
 
-### Building access
-
-To request building access go to the link [here](https://keys.adc.ucsc.edu/adckey/request) and enter Daniel Kim as the supervisor, with Biomed 445 as the room code. You will also need to add the last 5/6 digit number on your ID card as all of Biomed uses keycard access not physical keys. 
-
 ### Lab safety training
 
 Lab safety trainings are assigned by the Lab Safety Officer, and the required courses include:
@@ -15,8 +11,13 @@ Lab safety trainings are assigned by the Lab Safety Officer, and the required co
  - PPE Safety Training
  - Biosafety and Nucleic Acid Technologies
  - Bloodborne Pathogens
+ - Autoclave training
  
-Once *ALL* courses are completed, the certificates are to be sent to the LSR to keep safe copies.
+Once *ALL* courses are completed, the certificates are to be sent to the LSR to keep safe copies. Every lab member must complete all trainings, regardless of their work or whether they physically enter the lab space.
+
+### Building access
+
+Access to the lab space cannot be granted until all safety trainings are complete. To request building access go to the link [here](https://toolkit.science.ucsc.edu/facilities-management/building-access-security/#doc1) and enter Daniel Kim as the supervisor, with Biomed 445 as the room code. You will also need to add the last 5/6 digit number on your ID card as all of Biomed uses keycard access not physical keys. 
 
 ### Lab safety walkthrough
 

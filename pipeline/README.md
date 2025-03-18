@@ -2,6 +2,32 @@
 ## Alex D. Hill
 ### 24 SEP 2024
 
+#### Intra and Extracellular RNA Isolation [TODO]
+
+All of our experiments revolve around the study of RNA transcripts, meaning that for any of our work to produce usable data we must capture the RNA for analysis. We do this using RNA isolation methods developed in 'kits' which contain the reagents and protocols we need for extracting the RNA from a sample, whether that be cells or blood.
+
+Intracellular kit
+
+ExoRNEasy
+
+nRichDx
+
+#### Complementary DNA synthesis
+
+RNA by itself is very unstable and incredibly difficult to work with. For this reason, we typically convert all of our RNA into comlementary DNA, or cDNA. We do this through a process called reverse-transcription, where the RNA transcripts are used as a template to write a new DNA strand. This process is repeated to both amplify the number of molecules in a sample (which is important especially when we are working with low-input samples) and to make sure we end up with double-stranded DNA molecules.
+
+#### RNA Sequencing
+
+RNA-sequencing is the process by which we analyze a cDNA library like described above. We attach special adapter sequences to the cDNA molecules through a process called ligation, which then allows the molecules to attach to flow cells in different sequencing machines. These machines try to read the bases in each molecule and return to us the sequence information.
+
+##### Illumina short-reads [TODO]
+
+Illumina sequencers use a process called bridge-amplification in which the adapter sequence on a molecule is used to attach the molecule to the base of a flow cell on both ends so that it is curved like an arch mounted to the flow cell. The molecule then has a complementary strand added to the DNA molecule.
+
+##### Nanopore long-reads
+
+Nanopore sequencing is less complex. Tiny pores in a membrane allow for a single molecule of DNA to pass through. As the molecule is walked through the pore by a special protein, the voltage across the pore is measured. Because each base has a unique chemical composition, they affect the voltage in the pore differently. The changes in the voltage are then used to infer what base is passing through the pore at what time. This way, entire molecules can be read at once without fragmentation, and the use of voltage can allow for the detection of non-canonical and modified bases that are otherwise not detectible (easily) with other methods of sequencing. 
+
 #### Sequencing Data
 Our data is all RNA sequencing data, the majority of which is from cDNA libraries. Sequencing data is stored in the FAST*A* or FAST*Q* format.
 
